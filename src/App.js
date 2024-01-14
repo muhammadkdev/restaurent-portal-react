@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import MainPage from "./AnayaProject/MainPage";
-import Booking from "./AnayaProject/Booking";
-import About from "./AnayaProject/About";
-import Contact from "./AnayaProject/Contact";
-import Menu from "./AnayaProject/Menu";
+import Main1 from "./NewPro/Main1";
+import Login from "./NewPro/Login";
+import Signup from "./NewPro/Signup";
+import SubmitResume from "./NewPro/SubmitResume";
+import JobDetail from "./NewPro/JobDetail";
+import About from "./NewPro/About";
+import SearchJob from "./NewPro/SearchJob";
+import Contact from "./NewPro/Contact";
 
-import Service from "./AnayaProject/Service";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -14,14 +16,16 @@ function App() {
     <>
         <Router>
           <Routes>
-          <Route exact path="/" element={<MainPage/>}></Route>
-            <Route exact path="/mainpage" element={<MainPage />}></Route>
-            <Route exact path="/service" element={<Service />}></Route>
-            <Route exact path="/menu" element={<Menu />}></Route>
-            <Route exact path="/booking" element={<Booking />}></Route>
+          <Route exact path="/" element={<Main1 />}></Route>
+            <Route exact path="/main1" element={<Main1 />}></Route>
+            <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/signup" element={<Signup />}></Route>
+            <Route exact path="/submitresume" element={<SubmitResume />}></Route>
+            <Route exact path="/jobdetail" element={<JobDetail />}></Route>
             <Route exact path="/about" element={<About />}></Route>
-            <Route exact path="/contact" element={<Contact />}></Route>
-          </Routes>
+            <Route exact path="/searchjob" element={<SearchJob />}></Route>
+            <Route exact path="/contact" element={<Contact />}></Route> 
+            </Routes>
         </Router>
     </>
   );
